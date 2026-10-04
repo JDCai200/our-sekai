@@ -16,6 +16,10 @@ Windows 发布包包含 EXE、采音后端、模型与 FFmpeg；Android APK 包�
 
 Live、自动游玩、成绩、视频和游戏设置由已安装的社区版提供。外部工具不会移除原游戏安装中的编辑器入口。
 
+## 下载
+
+成品与模型包见 [0.2.0 预览版 Release](https://github.com/JDCai200/our-sekai/releases/tag/v0.2.0)。普通玩家只需下载 Windows 完整 ZIP 或 Android APK；两者均已包含模型。
+
 ## 使用
 
 Windows 完整解压发布 ZIP 后运行 OurSekai.exe。Android 安装 APK 后通过系统文件选择器导入歌曲；生成后点“保存 ZIP”，再在社区版导入。两端均可在高级设置填写 BPM 和原曲节拍起点。
