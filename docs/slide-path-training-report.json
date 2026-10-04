@@ -1,0 +1,16 @@
+{
+  "modes": 64,
+  "training_slides": 46730,
+  "scores": {
+    "validation": {
+      "slides": 9957,
+      "log_loss": 3.129949621429816,
+      "frequency_baseline_log_loss": 3.409406640979121
+    },
+    "test": {
+      "slides": 9134,
+      "log_loss": 3.0426035512180913,
+      "frequency_baseline_log_loss": 3.331841337278216
+    }
+  }
+}

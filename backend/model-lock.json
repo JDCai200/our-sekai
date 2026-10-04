@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "diagnostics/genelive_finetune_conservative/model_head_finetuned.pth",
+      "size": 32115468,
+      "sha256": "cc22c32f63d906e048d9446952252c52a3b57aa46362cf990a73ff4d9201b813"
+    },
+    {
+      "path": "diagnostics/genelive_autoosu/object_selector.pth",
+      "size": 4193657,
+      "sha256": "37df46ef04928fece35b590a1b44df1d535cc7724a2948660768bf2fd8d2a775"
+    },
+    {
+      "path": "diagnostics/pjsk_layout/layout_model.pth",
+      "size": 430709,
+      "sha256": "5a8c5e5b7725a7aac38983132ecd93fb68eab3cded251fa3212c3e58c3f2e840"
+    },
+    {
+      "path": "diagnostics/pjsk_patterns/patterns.joblib",
+      "size": 8168147,
+      "sha256": "b7c761a3b6bdfaa2f5ddccc4b379bfbdbbb3d78b3ff943450c292cbcea7b4066"
+    },
+    {
+      "path": "diagnostics/pjsk_patterns/active_model.json",
+      "size": 152,
+      "sha256": "adef268b09e8112eae3933490c0d6fc3313ac2df90413ab9e86b330fa97e5926"
+    },
+    {
+      "path": "diagnostics/pjsk_patterns_v2/patterns.joblib",
+      "size": 22503227,
+      "sha256": "78865838a6f97f99671f8f4044dce752679caf66d0f46957faed04df0ca42907"
+    },
+    {
+      "path": "models/autoosu/checkpoints/osu_model_v2.pt",
+      "size": 40371533,
+      "sha256": "6cd6c5b65a2ee926ca74de9bad2ebfa6d766e46bb65ae887577b7c2367d3045f"
+    },
+    {
+      "path": "diagnostics/pjsk_patterns_v2/expression.json",
+      "size": 25895117,
+      "sha256": "8942ca51a19542ac7d24865627d83c21fa6d62c011b58f613369addefedf08a3"
+    },
+    {
+      "path": "diagnostics/pjsk_patterns_v2/slide_paths.json",
+      "size": 4175425,
+      "sha256": "ce238c7d3f8791d3fc58c0ce5ef55160dcddf134a1c3fe122f119e9a1ad19c24"
+    }
+  ]
+}
