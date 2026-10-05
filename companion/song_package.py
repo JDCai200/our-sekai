@@ -77,6 +77,15 @@ def score_from_sus(text, music_id=0):
                 old_category = node['category']
                 if typ == 1:
                     node['category'] = 6 if old_category == 4 else 7 if old_category == 5 else 1
+                elif typ == 2:
+                    # A release tail must carry a tail category, not the default
+                    # Normal(0). The editor's NoteGroupUtility.IsLongEndNote only
+                    # accepts Long/Flick/Friction/FrictionHide/Friction* for a
+                    # chain end; category 0 renders as a bare tap and is flagged
+                    # as an illegal note. Friction/Hidden overlays keep their
+                    # categories; otherwise the tail matches the Long head's
+                    # colour (OpenSekai AddLongEndNoteVariations).
+                    node['category'] = old_category if old_category in (4, 5) else 1
                 elif typ in (3, 5):
                     node['category'] = 2 if typ == 3 else 13
                 streams[channel[2]].append((tick, lane, typ))

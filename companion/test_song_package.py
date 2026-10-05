@@ -26,6 +26,24 @@ class PackageContract(unittest.TestCase):
         self.assertEqual(score['NoteList'][0]['noteBaseType'],8)
         self.assertEqual(score['NoteList'][0]['type'],1)
 
+    def test_release_tail_is_long_not_tap(self):
+        # A ch3 end with no overlay or direction must become a Long tail
+        # (category 1, noteBaseType 2). Leaving it at category 0 produced a bare
+        # tap that the editor's NoteGroupUtility.IsLongEndNote rejects.
+        score=score_from_sus(HEADER+'#000320: 13000023\n')
+        first,last=score['NoteList']
+        self.assertEqual((first['category'],first['noteBaseType']),(1,2))
+        self.assertEqual((last['category'],last['noteBaseType']),(1,2))
+        self.assertEqual((last['direction'],last['previousConnectionId'],last['nextConnectionId']),(0,first['id'],-1))
+
+    def test_overlaid_tails_keep_tail_categories(self):
+        # Friction (ch1 5/6) and hidden/elaser (ch1 7/8) tails must stay
+        # Friction(4)/FrictionHide(5) instead of collapsing to Long.
+        friction=score_from_sus(HEADER+'#00012: 00000053\n#000320: 13000023\n')
+        self.assertEqual((friction['NoteList'][-1]['category'],friction['NoteList'][-1]['noteBaseType']),(4,11))
+        hidden=score_from_sus(HEADER+'#00012: 00000073\n#000320: 13000023\n')
+        self.assertEqual((hidden['NoteList'][-1]['category'],hidden['NoteList'][-1]['noteBaseType']),(5,12))
+
     def test_refuse_unclosed_chain(self):
         with self.assertRaises(ValueError):score_from_sus(HEADER+'#000320: 13\n')
 
