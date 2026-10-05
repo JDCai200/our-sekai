@@ -17,6 +17,7 @@
 *.nsi
 Ojsk Community v*.exe
 readme.txt
+run_companion.cmd
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
@@ -40,6 +41,49 @@ readme.txt
 # Visual Studio cache directory
 .vs/
 .trae/
+.workbuddy/
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.claudeignore
+.cursor/
+.cursorrules
+.cursorignore
+.cursor-tutor/
+.cursor-server/
+.windsurf/
+.windsurf-session/
+.windsurf-cache/
+.windsurfrules
+.codeium/
+.codeiumignore
+codeium.json
+.aider*
+.aider.tags.cache.v3/
+.aider.chat.history.md
+.continue/
+.continuerc.json
+.continue-sessions/
+.githubnext/
+.copilot/
+.github/copilot-instructions.md
+.cody/
+.cody-cache/
+.codyignore
+cody.json
+.tabnine/
+.tabnine_root
+tabnine_config.json
+.tabnineignore
+.roo/
+.rooignore
+.gemini/
+.geminiignore
+GEMINI.md
+.idx/
+.google-ai/
+.codex/
+.codex_tmp/
 
 # Gradle cache directory
 .gradle/
@@ -123,6 +167,8 @@ jsofttool.json
 # Our Sekai: local runtimes, private songs, model weights and verification outputs
 /.build-tools/
 /artifacts/
+# Prebuilt worker linked in for local source runs (see docs/build.md).
+/AutoChart/
 /backend/.venv/
 /backend/.smoke/
 /backend/runtime.local.json
